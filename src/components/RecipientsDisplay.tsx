@@ -44,14 +44,11 @@ export default function RecipientsDisplay({recipients}:RecipientsProps) {
     }
     console.log(trimmedText);
     let tmpArr = trimmedText.split(", ");
-    //console.log(tmpArr);
     const lstEmail = tmpArr[tmpArr.length - 1]
-    //console.log(lstEmail);
     
     if(recipients.indexOf(lstEmail)==-1){
       tmpArr.pop();
     }
-
    
     if(tmpArr.length==0){
       tmpArr.push(recipients[0]);
@@ -110,34 +107,3 @@ export default function RecipientsDisplay({recipients}:RecipientsProps) {
         </CellContainer>
       );
 };
-
-
-// export default styled(RecipientsDisplay)`
-//   .recipient-cell {
-//     font-size: 16px;
-//     foreground-color: #333333;
-//     top-padding: 5px;
-//     bottom-padding: 5px;
-//     left-padding: 10px;
-//     right-padding: 10px;
-//   }
-  
-//   .text-box {
-//     border: var(--border-style);
-//     padding: 5px 10px;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-//   }
-
-//   button {
-//     font-size: 16px;
-//     foreground-color: #f0f0f0;
-//     background-color: #666666;
-//     border-radius: 3px;
-//     top-padding: 2px;
-//     bottom-padding: 2px;
-//     left-padding: 5px;
-//     right-padding: 5px;
-//   }
-// `
