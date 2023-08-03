@@ -52,9 +52,6 @@ export default function RecipientsDisplay({recipients}:RecipientsProps) {
       tmpArr.pop();
     }
 
-    // if(lstEmail.indexOf('.com')==-1){
-    //   tmpArr.pop();
-    // }
    
     if(tmpArr.length==0){
       tmpArr.push(recipients[0]);
